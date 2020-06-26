@@ -1,0 +1,31 @@
+{
+  "name": "nuxt2-firebase-ssr",
+  "version": "1.0.0",
+  "description": "My groovy Nuxt.js project",
+  "author": "Nghiach",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.6.0",
+    "cookieparser": "^0.1.0",
+    "core-js": "^2.6.10",
+    "firebase": "^7.15.4",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "nuxt": "2.13.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^1.19.1",
+    "tailwindcss-dark-mode": "^1.1.4"
+  }
+}

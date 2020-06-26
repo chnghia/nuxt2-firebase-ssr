@@ -1,0 +1,22 @@
+{
+  "name": "nuxt2-firebase-ssr",
+  "version": "1.0.0",
+  "description": "nuxt2 firebase ssr",
+  "main": "index.js",
+  "scripts": {
+    "preinstall:admin": "cd admin/console && npm install",
+    "admin:set": "cd admin/console && npm run admin:set",
+    "dev": "cd src && npm run dev",
+    "build:func": "cd functions && npm install",
+    "build:nuxt": "cd src && npm install && npm run build",
+    "build": "npm run clean && npm run build:func && npm run build:nuxt && npm run copy:assets && npm run copy:static",
+    "clean": "mkdir -p public && rm -rf public/*",
+    "copy:assets": "cp -R functions/.nuxt/dist/client/ public/assets",
+    "copy:static": "cp -R src/static/* public",
+    "serve": "firebase serve --only hosting,functions",
+    "deploy": "firebase deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nghiach",
+  "license": "MIT"
+}
